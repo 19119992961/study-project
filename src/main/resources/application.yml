@@ -3,3 +3,7 @@ server:
 
 url:
   crawlingUrl: https://livesite2.hytera.com/cn,https://livesite2.hytera.com/en
+
+
+scheduled:
+  crawlingTime: 0/5 * * * * ?

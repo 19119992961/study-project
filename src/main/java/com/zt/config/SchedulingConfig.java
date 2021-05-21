@@ -21,8 +21,9 @@ public class SchedulingConfig {
     @Value("${url.crawlingUrl}")
     private String crawlingUrl;
 
+
     @Async
-    @Scheduled(fixedDelay = 1000)  //间隔1秒
+    @Scheduled(cron = "${scheduled.crawlingTime}")  //间隔1秒
     public void first() throws InterruptedException {
         System.out.println(crawlingUrl);
         System.out.println("定时任务开始 : " + LocalDateTime.now().toLocalTime() + "\r\n线程 : " + Thread.currentThread().getName());
