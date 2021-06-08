@@ -74,7 +74,7 @@ public class LogsAspect {
         webLog.setStartTime(startTime);
         webLog.setUri(request.getRequestURI());
         webLog.setUrl(request.getRequestURL().toString());
-        System.out.println(webLog);
+
         Map<String,Object> logMap = new HashMap<>();
         logMap.put("url",webLog.getUrl());
         logMap.put("ip",webLog.getIp());
@@ -117,5 +117,4 @@ public class LogsAspect {
             return argList;
         }
     }
-
 }
